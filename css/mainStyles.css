@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #1e8ad9;
+    --secondary-color: #46a6ea;
+    --tertiary-color: #86c4f3;
+    --additional-color-1: #F16D1C;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+.product {
+    border: 1px solid var(--tertiary-color);
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    color: var(--additional-color-1);
+}
+p {
+    color: var(--additional-color-1);
+}

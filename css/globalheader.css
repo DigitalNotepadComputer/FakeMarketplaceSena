@@ -1,0 +1,48 @@
+        /* Global Header Styles */
+        .global-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .global-header h1 {
+            margin: 0;
+        }
+
+        .global-header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .global-header li {
+            margin-right: 20px;
+        }
+
+        .global-header a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Media Query for iPhone 14 Pro Max */
+        @media screen and (max-width: 428px) {
+            .global-header {
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .global-header ul {
+                margin-top: 10px;
+            }
+
+            .global-header li {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
