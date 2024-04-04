@@ -17,8 +17,8 @@ body {
 }
 .product {
   border: 1px solid var(--tertiary-color);
-  padding: 10px;
-  margin: 10px;
+  padding: 6px;
+  margin: 5px;
   width: 98px;
   height: auto;
 }
@@ -40,7 +40,7 @@ a {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 45%;
+  width: 430px;
 }
 /* ... other styles ... */
 
@@ -50,7 +50,7 @@ a {
     z-index: 1; /* Higher layer than other elements */
     left: 0;
     top: 0;
-    width: 100%; /* Full screen width */
+    width: 410px; /* Full screen width */
     height: 100%; /* Full screen height */
     overflow: auto; /* Allows scrolling if content is larger */
     background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
@@ -58,14 +58,14 @@ a {
   
   .modal-content {
     margin: 15% auto; /* Centered content */
-    width: 50%; /* Modal content width */
+    width: 420px; /* Modal content width */
     background-color: #fff; /* White background */
-    padding: 20px;
+    padding: 15px;
     border-radius: 4px;
     animation: modal-appear 0.5s ease-in-out;
   }
   #product-image{
-    width: 80%;
+    width: 60%;
   }
   
   @keyframes modal-appear {
