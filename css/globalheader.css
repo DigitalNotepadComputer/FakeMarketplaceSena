@@ -1,48 +1,114 @@
-        /* Global Header Styles */
-        .global-header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* Global Header Styles */
+.global-header {
+  background-color: #1e8ad9;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-bottom: 1px;
+}
 
-        .global-header h1 {
-            margin: 0;
-        }
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
 
-        .global-header ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-        .global-header li {
-            margin-right: 20px;
-        }
+.menu ul li {
+  margin-bottom: 10px;
+}
 
-        .global-header a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
+.menu ul li a {
+  color: #1e8ad9;
+  outline: none;
+}
+#buscador {
+  /* Posicionamiento */
+  display: block; /* Muestra la barra como un bloque */
+  margin: 0 auto; /* Centra la barra en la página */
+  width: 50%; /* Ajusta el ancho según tu diseño */
 
-        /* Media Query for iPhone 14 Pro Max */
-        @media screen and (max-width: 428px) {
-            .global-header {
-                padding: 10px;
-                flex-direction: column;
-                align-items: center;
-            }
+  /* Estilos de borde */
+  border: 1px solid #ccc; /* Borde simple */
+  border-radius: 5px; /* Bordes redondeados */
 
-            .global-header ul {
-                margin-top: 10px;
-            }
+  /* Relleno y margen interno */
+  padding: 10px 15px; /* Espacio alrededor del texto */
 
-            .global-header li {
-                margin: 0;
-                margin-bottom: 10px;
-            }
-        }
+  /* Apariencia del texto */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  color: #333; /* Color del texto */
+
+  /* Placeholder */
+  ::placeholder {
+    color: #999; /* Color del texto placeholder */
+    font-weight: lighter; /* Aspecto más ligero */
+  }
+
+  /* Enfoque */
+  :focus {
+    outline: none; /* Elimina el borde azul por defecto */
+    border-color: #999; /* Cambia el color del borde al enfocar */
+  }
+}
+.userimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.carritoimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.categorias {
+  margin: 10px;
+}
+
+.categorias ul {
+  display: flex;
+  justify-content: space-evenly; /* Distributes items evenly */
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Removes default bullet points */
+  border-bottom: 1px solid #ddd; /* Adds a subtle bottom border */
+}
+
+.categorias li {
+  margin-right: 10px;
+  padding: 8px 12px; /* Adds some padding for better spacing */
+  border-radius: 5px; /* Creates rounded corners */
+  background-color: #46a6ea; /* Light gray background color */
+  /* Optional: Add hover effect for a nice touch */
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.categorias li:hover {
+  background-color: #eee; /* Change background color on hover */
+}
+
+.global-header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
