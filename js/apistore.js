@@ -141,6 +141,10 @@ function showModal(product) {
   const modalDescription = document.querySelector('#product-description');
   const modalPrice = document.querySelector('#product-price')
   const addToCartButton = document.createElement('button');
+  const quantityInput = document.getElementById('quantity');
+  const decrementButton = document.querySelector('.minus');
+  const incrementButton = document.querySelector('.plus');
+  
 
   modalImage.src = product.image;
   modalImage.alt = product.title;
@@ -151,16 +155,27 @@ function showModal(product) {
   
 
   modal.style.display = 'block';
-
+  
  //cierra el modal cuando le de click
   closeModalButton.addEventListener('click', () => {
     modal.style.display = 'none';
   });
-  const modalAddToCartButton = document.querySelector('#modal-añadir-carrito');
-  modalAddToCartButton.addEventListener('click', () => {
-    // Manejar aquí la adición del producto al carrito
-    console.log('Producto añadido al carrito desde el modal:', product.title);
-  });
+// Make sure modalAddToCartButton is assigned the correct value
+const modalAddToCartButton = document.querySelector('#modal-añadir-carrito');
+
+// Log the variable to check if it's null
+console.log('modalAddToCartButton:', modalAddToCartButton);
+
+// Check if modalAddToCartButton is not null before adding the event listener
+if (modalAddToCartButton) {
+    modalAddToCartButton.addEventListener('click', () => {
+        // Handle adding the product to the cart
+        console.log('Producto añadido al carrito desde el modal:', product.title);
+    });
+} else {
+    console.error('modalAddToCartButton is null or undefined.');
+}
+
 
   //cierra el modal cuando le de click por fuera
   window.addEventListener('click', (event) => {
@@ -168,6 +183,41 @@ function showModal(product) {
       modal.style.display = 'none';
     }
   });
-  
-}
 
+
+    let quantity = parseInt(quantityInput.value) || 1; // Initial quantity
+
+    // Function to update the quantity display
+    function updateQuantityDisplay() {
+        quantityInput.value = quantity;
+    }
+
+    // Event listener for decrement button
+    decrementButton.addEventListener('click', () => {
+        if (quantity > 1) {
+            quantity--;
+            updateQuantityDisplay();
+        }
+    });
+
+    // Event listener for increment button
+    incrementButton.addEventListener('click', () => {
+        if (quantity < 30) { // Assuming max quantity is 30
+            quantity++;
+            updateQuantityDisplay();
+        }
+    });
+
+    // Event listener for quantity input change
+    quantityInput.addEventListener('change', () => {
+        const newQuantity = parseInt(quantityInput.value);
+        if (!isNaN(newQuantity) && newQuantity >= 1 && newQuantity <= 30) { // Assuming max quantity is 30
+            quantity = newQuantity;
+        } else {
+            quantityInput.value = quantity;
+        }
+    });
+
+    // Call updateQuantityDisplay initially
+    updateQuantityDisplay();
+}

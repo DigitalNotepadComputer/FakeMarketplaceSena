@@ -19,11 +19,11 @@ body {
   border: 1px solid var(--tertiary-color);
   padding: 6px;
   margin: 5px;
-  width: 98px;
+  width: 100px;
   height: auto;
 }
 .product img {
-  max-width: 90%;
+  max-width: 100%;
    height: auto; 
 }
 h1 {
@@ -40,7 +40,7 @@ a {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 400px;
+  width: 420px;
 }
 /* ... other styles ... */
 
@@ -50,7 +50,7 @@ a {
     z-index: 1; /* Higher layer than other elements */
     left: 0;
     top: 0;
-    width: 410px; /* Full screen width */
+    width: 430px; /* Full screen width */
     height: 100%; /* Full screen height */
     overflow: auto; /* Allows scrolling if content is larger */
     background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
@@ -58,7 +58,8 @@ a {
   
   .modal-content {
     margin: 15% auto; /* Centered content */
-    width: 420px; /* Modal content width */
+    width: 360px; /* Modal content width */
+    height: 600px;
     background-color: #fff; /* White background */
     padding: 15px;
     border-radius: 4px;
@@ -115,3 +116,27 @@ a {
   }  
 
 
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background-color: #1e8ad9;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#quantity {
+    width: 40px;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    outline: none;
+}

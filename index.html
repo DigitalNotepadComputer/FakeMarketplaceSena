@@ -47,20 +47,24 @@
     
 
     <div class="cards" id="products-container"></div>
-
     <div class="modal" id="productModal">
         <div class="modal-content">
-          <span class="close-modal">&times;</span>
-          <div class="product-image-container">
-            <img id="product-image" src="" alt="">
-          </div>
-          <div class="product-info">
-            <h2 id="product-title"></h2>
-            <p id="product-description"></p>
-            <span id="product-price"></span>
-          </div>
+            <span class="close-modal">&times;</span>
+            <div class="product-image-container">
+                <img id="product-image" src="" alt="">
+            </div>
+            <div class="product-info">
+                <h2 id="product-title"></h2>
+                <p id="product-description"></p>
+                <span id="product-price"></span>
+                <div class="quantity-selector">
+                    <input type="button" value="-" class="quantity-btn minus">
+                    <input type="number" id="quantity" class="quantity-input" name="quantity" value="1" min="1" max="30" step="1" aria-label="Cantidad de productos">
+                    <input type="button" value="+" class="quantity-btn plus">
+                </div>   
+            </div>
         </div>
-      </div>
+    </div>    
     
 <script src="js/apistore.js"></script>
 </body>
