@@ -50,7 +50,7 @@ a {
     z-index: 1; /* Higher layer than other elements */
     left: 0;
     top: 0;
-    width: 430px; /* Full screen width */
+    width: 428px; /* Full screen width */
     height: 100%; /* Full screen height */
     overflow: auto; /* Allows scrolling if content is larger */
     background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
@@ -59,7 +59,6 @@ a {
   .modal-content {
     margin: 15% auto; /* Centered content */
     width: 360px; /* Modal content width */
-    height: 600px;
     background-color: #fff; /* White background */
     padding: 15px;
     border-radius: 4px;
