@@ -115,8 +115,12 @@ function createProductCard(product) {
 
   productDiv.appendChild(image);
   productDiv.appendChild(title);
-
+  const addToCartButton = document.createElement('button');
+  addToCartButton.textContent = 'Añadir al carrito';
+ 
+  productDiv.appendChild(addToCartButton);
   productsContainer.appendChild(productDiv);
+
 }
 
 categoryButtons.forEach(button => {
@@ -136,12 +140,14 @@ function showModal(product) {
   const modalTitle = document.querySelector('#product-title');
   const modalDescription = document.querySelector('#product-description');
   const modalPrice = document.querySelector('#product-price')
+  const addToCartButton = document.createElement('button');
 
   modalImage.src = product.image;
   modalImage.alt = product.title;
   modalTitle.textContent = product.title;
   modalDescription.textContent = product.description;
   modalPrice.textContent = ("$ " + product.price);
+  addToCartButton.textContent = ('Añadir al carrito');
   
 
   modal.style.display = 'block';
@@ -150,6 +156,11 @@ function showModal(product) {
   closeModalButton.addEventListener('click', () => {
     modal.style.display = 'none';
   });
+  const modalAddToCartButton = document.querySelector('#modal-añadir-carrito');
+  modalAddToCartButton.addEventListener('click', () => {
+    // Manejar aquí la adición del producto al carrito
+    console.log('Producto añadido al carrito desde el modal:', product.title);
+  });
 
   //cierra el modal cuando le de click por fuera
   window.addEventListener('click', (event) => {
@@ -157,5 +168,6 @@ function showModal(product) {
       modal.style.display = 'none';
     }
   });
+  
 }
 
