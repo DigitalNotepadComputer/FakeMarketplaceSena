@@ -157,9 +157,14 @@ function showModal(product) {
   modal.style.display = 'block';
   
  //cierra el modal cuando le de click
-  closeModalButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+ closeModalButton.addEventListener('click', () => {
+  // Reset the quantity to 1 when the modal is closed
+  quantity = 1;
+  updateQuantityDisplay();
+
+  // Close the modal
+  modal.style.display = 'none';
+});
 // Make sure modalAddToCartButton is assigned the correct value
 const modalAddToCartButton = document.querySelector('#modal-añadir-carrito');
 
