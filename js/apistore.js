@@ -140,7 +140,7 @@ function showModal(product) {
   const modalTitle = document.querySelector('#product-title');
   const modalDescription = document.querySelector('#product-description');
   const modalPrice = document.querySelector('#product-price')
-  const addToCartButton = document.createElement('button');
+  const addToCartButton = document.querySelector('button');
   const quantityInput = document.getElementById('quantity');
   const decrementButton = document.querySelector('.minus');
   const incrementButton = document.querySelector('.plus');

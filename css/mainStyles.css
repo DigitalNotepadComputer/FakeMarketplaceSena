@@ -67,6 +67,25 @@ a {
   #product-image{
     width: 60%;
   }
+
+  .button {
+    display: inline-block;
+    background-color: #1e8ad9; /* Color de fondo */
+    border: none; /* Quitamos el borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Quitamos subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 4px 2px; /* Margen exterior */
+    cursor: pointer; /* Cursor al pasar por encima */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+  }
+  
   
   @keyframes modal-appear {
     from { opacity: 0; }
